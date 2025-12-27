@@ -35,6 +35,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class EndPointsInformationProvider implements IEndPointsInformationProvider {
 
+    private static final String TEMPLATES_BASE_PATH = "/VulnerableApp/templates/";
+
     private EnvUtils envUtils;
 
     private MessageBundle messageBundle;
@@ -148,7 +150,7 @@ public class EndPointsInformationProvider implements IEndPointsInformationProvid
                 Arrays.asList(
                         new ResourceURI(
                                 false,
-                                "/VulnerableApp/templates/"
+                                TEMPLATES_BASE_PATH
                                         + facadeVulnerabilityDefinition.getName()
                                         + "/"
                                         + template
@@ -156,7 +158,7 @@ public class EndPointsInformationProvider implements IEndPointsInformationProvid
                                 ResourceType.CSS.name()),
                         new ResourceURI(
                                 false,
-                                "/VulnerableApp/templates/"
+                                TEMPLATES_BASE_PATH
                                         + facadeVulnerabilityDefinition.getName()
                                         + "/"
                                         + template
@@ -165,7 +167,7 @@ public class EndPointsInformationProvider implements IEndPointsInformationProvid
         resourceInformation.setHtmlResource(
                 new ResourceURI(
                         false,
-                        "/VulnerableApp/templates/"
+                        TEMPLATES_BASE_PATH
                                 + facadeVulnerabilityDefinition.getName()
                                 + "/"
                                 + template
